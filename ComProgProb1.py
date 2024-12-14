@@ -1,9 +1,9 @@
 class StudentRecord:
-    def __init__(self, student_id, name, course, grade1, grade2, grade3, grade4):
+    def __init__(self, student_id, name, course, Math, English, Science, PE):
         self.student_id = student_id
         self.name = name
         self.course = course
-        self.grades = [grade1, grade2, grade3, grade4]
+        self.grades = [Math, English, Science, PE]
 
     def average_grade(self):
         return sum(self.grades) / len(self.grades)
@@ -62,10 +62,10 @@ def main():
             student_id = input("Enter Student ID: ").strip()
             name = input("Enter Student Name: ").strip()
             course = input("Enter Course (e.g., BSEcE, BSCS): ").strip()
-            grade1 = float(input("Enter Grade 1 (0-100): ").strip())
-            grade2 = float(input("Enter Grade 2 (0-100): ").strip())
-            grade3 = float(input("Enter Grade 3 (0-100): ").strip())
-            grade4 = float(input("Enter Grade 4 (0-100): ").strip())
+            grade1 = float(input("Enter Grade in Math (0-100): ").strip())
+            grade2 = float(input("Enter Grade in English(0-100): ").strip())
+            grade3 = float(input("Enter Grade in Science (0-100): ").strip())
+            grade4 = float(input("Enter Grade in PE (0-100): ").strip())
             student = StudentRecord(student_id, name, course, grade1, grade2, grade3, grade4)
             manager.add_student(student)
         elif choice == "2":
